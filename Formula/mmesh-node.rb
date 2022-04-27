@@ -11,7 +11,7 @@ class MmeshNode < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/mmesh/m-node/releases/download/v0.1.0/mmesh-node_0.1.0_darwin_arm64.tar.gz"
-      sha256 "8d8563812e833f880d1381cbf72ccfd97ec3200874f50028f60eeeaab7b622ab"
+      sha256 "cecf2ef254e6fcbcea03e0782c6bcb858f4ebf7837e1ac80fc04a7c2fd5a66cd"
 
       def install
         bin.install "mmesh-node"
@@ -19,7 +19,7 @@ class MmeshNode < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/mmesh/m-node/releases/download/v0.1.0/mmesh-node_0.1.0_darwin_amd64.tar.gz"
-      sha256 "830a197ce203a12941ec670dbf936af01ecd91e22a55af402c491594ae2c8ac0"
+      sha256 "1fb3ebac385b8ff7432a9fcc528b414a0d2639946074ce005ad0569d1c735477"
 
       def install
         bin.install "mmesh-node"
@@ -30,7 +30,7 @@ class MmeshNode < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/mmesh/m-node/releases/download/v0.1.0/mmesh-node_0.1.0_linux_arm64.tar.gz"
-      sha256 "182b14336c60656bf7b0710e371e7e72560ab756ac9b9156ccd9f5331aade224"
+      sha256 "35d682e5e211f0153e3a2e7117e3344b60f71a22d5e19c44d8e5c7369fc39484"
 
       def install
         bin.install "mmesh-node"
@@ -38,7 +38,7 @@ class MmeshNode < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/mmesh/m-node/releases/download/v0.1.0/mmesh-node_0.1.0_linux_amd64.tar.gz"
-      sha256 "65c155010556625b21dfc09e8984f0d5be940a85eab65b893fc6aaebbfbeb578"
+      sha256 "5bef288885e01d852266f17abac70b55903d497851dcb1b455e0b1c0f8cfcc00"
 
       def install
         bin.install "mmesh-node"
