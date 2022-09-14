@@ -5,13 +5,13 @@
 class MmeshCli < Formula
   desc "mmesh-cli"
   homepage "https://mmesh.io"
-  version "0.2.0"
+  version "0.3.0"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/mmesh/m-cli/releases/download/v0.2.0/mmesh-cli_0.2.0_darwin_arm64.tar.gz"
-      sha256 "e1571cc4699310ca2258559b913ef96891680bfae8a8d438051194622a54cc59"
+      url "https://github.com/mmesh/m-cli/releases/download/v0.3.0/mmesh-cli_0.3.0_darwin_arm64.tar.gz"
+      sha256 "ef8f7740f00c14152c7c04dcec03c996cc77b973ade70ee5a98451db803556d5"
 
       def install
         bin.install "mmeshctl"
@@ -21,8 +21,8 @@ class MmeshCli < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mmesh/m-cli/releases/download/v0.2.0/mmesh-cli_0.2.0_darwin_amd64.tar.gz"
-      sha256 "dbfd00003c6c6d30aacdeb30e82c43a2c1d28ce33d8213af41d5224355e4550f"
+      url "https://github.com/mmesh/m-cli/releases/download/v0.3.0/mmesh-cli_0.3.0_darwin_amd64.tar.gz"
+      sha256 "515ce739a8c638d97f8cec97797b724169a9e1d77d2187cd37ab176c2706a481"
 
       def install
         bin.install "mmeshctl"
@@ -35,8 +35,8 @@ class MmeshCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mmesh/m-cli/releases/download/v0.2.0/mmesh-cli_0.2.0_linux_arm64.tar.gz"
-      sha256 "67fe1c128ccf09bc4d8a743c6a3de3f9caec5ed6181df19004b5cf0f6349a6ce"
+      url "https://github.com/mmesh/m-cli/releases/download/v0.3.0/mmesh-cli_0.3.0_linux_arm64.tar.gz"
+      sha256 "ab33dd6b3d727ea4d3ae2cfa4a3a8c459e01df261b42ee2849bcca17d900fe11"
 
       def install
         bin.install "mmeshctl"
@@ -46,8 +46,8 @@ class MmeshCli < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mmesh/m-cli/releases/download/v0.2.0/mmesh-cli_0.2.0_linux_amd64.tar.gz"
-      sha256 "042f7a2eb7b9d9e2d5a3a62e44450e7a61d7fc47ec838d43681b617bfd3abadf"
+      url "https://github.com/mmesh/m-cli/releases/download/v0.3.0/mmesh-cli_0.3.0_linux_amd64.tar.gz"
+      sha256 "f3fbfa9c405dc193034bfaed8f3a28710d6717ff22e6b4080f8765105bbb4009"
 
       def install
         bin.install "mmeshctl"
