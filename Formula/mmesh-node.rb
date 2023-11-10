@@ -5,21 +5,21 @@
 class MmeshNode < Formula
   desc "mmesh-node agent"
   homepage "https://mmesh.io"
-  version "0.6.0"
+  version "0.6.1"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/mmesh/m-node/releases/download/v0.6.0/mmesh-node_0.6.0_darwin_arm64.tar.gz"
-      sha256 "b1a534a57fca3471c6cab84a4efc458db4ce9bd90e0f3592e91ad1015d7a0c38"
+      url "https://github.com/mmesh/m-node/releases/download/v0.6.1/mmesh-node_0.6.1_darwin_arm64.tar.gz"
+      sha256 "fcea7af57b394411148a9ce2f7d01daad29c7e58f12610a3e71819d4b4021ae7"
 
       def install
         bin.install "mmesh-node"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mmesh/m-node/releases/download/v0.6.0/mmesh-node_0.6.0_darwin_amd64.tar.gz"
-      sha256 "af9e73e78a6cd5309b63584240f5cfb537caaf4e2382ced21b3f853a7246a228"
+      url "https://github.com/mmesh/m-node/releases/download/v0.6.1/mmesh-node_0.6.1_darwin_amd64.tar.gz"
+      sha256 "305ccc712258296827cc595b786cbc5885d0fb0dfb13520a45a064c70f464670"
 
       def install
         bin.install "mmesh-node"
@@ -29,16 +29,16 @@ class MmeshNode < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mmesh/m-node/releases/download/v0.6.0/mmesh-node_0.6.0_linux_arm64.tar.gz"
-      sha256 "24f5e4cdbc41ab615ae7d66a5fafc2528a9314af195d20423983516fffbe4d3b"
+      url "https://github.com/mmesh/m-node/releases/download/v0.6.1/mmesh-node_0.6.1_linux_arm64.tar.gz"
+      sha256 "f2acdcb659285c77bb81fb9fc173d5aec1ca8c116b7c1cbd53351190c3bbaaac"
 
       def install
         bin.install "mmesh-node"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mmesh/m-node/releases/download/v0.6.0/mmesh-node_0.6.0_linux_amd64.tar.gz"
-      sha256 "35237cecff92c8e63f40eb3838965241ea169b77c13ed5231c1ac1ba5449d01c"
+      url "https://github.com/mmesh/m-node/releases/download/v0.6.1/mmesh-node_0.6.1_linux_amd64.tar.gz"
+      sha256 "913a283560f7dcb884a2c61f79470f2eed0d6905c3b83f126ca87ebb24f6ce57"
 
       def install
         bin.install "mmesh-node"
