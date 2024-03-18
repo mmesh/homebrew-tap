@@ -5,44 +5,48 @@
 class MmeshNode < Formula
   desc "mmesh-node agent"
   homepage "https://mmesh.io"
-  version "0.13.2"
+  version "0.13.3"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/mmesh/m-node/releases/download/v0.13.2/mmesh-node_0.13.2_darwin_arm64.tar.gz"
-      sha256 "bfe1576188ccd2b3dea1538b49a7987caaa7024b171bf7896b337ddb7222bc95"
+      url "https://github.com/mmesh/m-node/releases/download/v0.13.3/mmesh-node_0.13.3_darwin_arm64.tar.gz"
+      sha256 "409fabf9df925b9d086f37a1677e79823be7da747a2ec74a39945599e44ce1ba"
 
       def install
-        bin.install "mmesh-node"
+        libexec.install "mmesh-node"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mmesh/m-node/releases/download/v0.13.2/mmesh-node_0.13.2_darwin_amd64.tar.gz"
-      sha256 "8eb58a799e884f76728a4bb601e13ffe0cb088dc4281063275a05e5ed14a6a1e"
+      url "https://github.com/mmesh/m-node/releases/download/v0.13.3/mmesh-node_0.13.3_darwin_amd64.tar.gz"
+      sha256 "364af2bdcc33164b748712b387b4d72b2cea14ffbaecc60dd2f8e29eedf53391"
 
       def install
-        bin.install "mmesh-node"
+        libexec.install "mmesh-node"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mmesh/m-node/releases/download/v0.13.2/mmesh-node_0.13.2_linux_arm64.tar.gz"
-      sha256 "de49d2433e6d217b86a90745e8ebd0ee4a72fa08861b5d4ea81e0fc814e62da8"
+      url "https://github.com/mmesh/m-node/releases/download/v0.13.3/mmesh-node_0.13.3_linux_arm64.tar.gz"
+      sha256 "e1b904771fdbda081b6a24a96d8698e8f97071266fbf3e1093e3066c9bc46e41"
 
       def install
-        bin.install "mmesh-node"
+        libexec.install "mmesh-node"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mmesh/m-node/releases/download/v0.13.2/mmesh-node_0.13.2_linux_amd64.tar.gz"
-      sha256 "62d890a22f6631a8dfd5d439bef254487d5868175c566726be52d296fb7f15a1"
+      url "https://github.com/mmesh/m-node/releases/download/v0.13.3/mmesh-node_0.13.3_linux_amd64.tar.gz"
+      sha256 "40930f7acda7a5202792588494a1313c1b35eb2e43b15b4d98c761fda28f7e80"
 
       def install
-        bin.install "mmesh-node"
+        libexec.install "mmesh-node"
       end
     end
+  end
+
+  test do
+    system "#{libexec}/mmesh-node version"
   end
 end
