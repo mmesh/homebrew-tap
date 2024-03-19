@@ -5,21 +5,21 @@
 class MmeshNode < Formula
   desc "mmesh-node agent"
   homepage "https://mmesh.io"
-  version "0.13.3"
+  version "0.13.4"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/mmesh/m-node/releases/download/v0.13.3/mmesh-node_0.13.3_darwin_arm64.tar.gz"
-      sha256 "409fabf9df925b9d086f37a1677e79823be7da747a2ec74a39945599e44ce1ba"
+      url "https://github.com/mmesh/m-node/releases/download/v0.13.4/mmesh-node_0.13.4_darwin_arm64.tar.gz"
+      sha256 "00b0ff5618302394b1865b279bc4095a0f1461bd67c2dd42debe0fedbc1ea4a6"
 
       def install
         libexec.install "mmesh-node"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mmesh/m-node/releases/download/v0.13.3/mmesh-node_0.13.3_darwin_amd64.tar.gz"
-      sha256 "364af2bdcc33164b748712b387b4d72b2cea14ffbaecc60dd2f8e29eedf53391"
+      url "https://github.com/mmesh/m-node/releases/download/v0.13.4/mmesh-node_0.13.4_darwin_amd64.tar.gz"
+      sha256 "2d4c87403d2d4ab7c8d27b810da7ace513522e24277c3e16d6eab3e6fcd86b44"
 
       def install
         libexec.install "mmesh-node"
@@ -29,16 +29,16 @@ class MmeshNode < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mmesh/m-node/releases/download/v0.13.3/mmesh-node_0.13.3_linux_arm64.tar.gz"
-      sha256 "e1b904771fdbda081b6a24a96d8698e8f97071266fbf3e1093e3066c9bc46e41"
+      url "https://github.com/mmesh/m-node/releases/download/v0.13.4/mmesh-node_0.13.4_linux_arm64.tar.gz"
+      sha256 "0860627bf88f5f1b523bf356300ea0a339877afd3de951ca6009aa2d3ba4a4ba"
 
       def install
         libexec.install "mmesh-node"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mmesh/m-node/releases/download/v0.13.3/mmesh-node_0.13.3_linux_amd64.tar.gz"
-      sha256 "40930f7acda7a5202792588494a1313c1b35eb2e43b15b4d98c761fda28f7e80"
+      url "https://github.com/mmesh/m-node/releases/download/v0.13.4/mmesh-node_0.13.4_linux_amd64.tar.gz"
+      sha256 "7b8e6c1195c32a87fa9315ab1f42fd10a2ee0c81ac521c6b97d5fccfec4f7ae9"
 
       def install
         libexec.install "mmesh-node"
